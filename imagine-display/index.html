@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mycroft</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <img src="images/sse-logo.png" alt="Society of Software Engineers" class="navbar-right logo" />
+            <div class="navbar-header navbar-left">
+                <h1>Mycroft</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row" id="intro-row">
+                    <p class="lead">
+                        <img src="images/mycroft.svg" class="img-responsive pull-left" width="170" alt="Mycroft logo" />
+                        Mycroft is an extensible AI we built for the SSE lab
+                    </p>
+                    <p>Inspired by Iron Man's J.A.R.V.I.S., we wanted to create an AI that could understand
+                        the people in the lab and respond to them interactively. We also wanted to let SSE members
+                        add new functionality in the future, and plug into other hardware and services as they become
+                        available.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="images/devteam.jpg" class="img-responsive" alt="Mycroft development team" />
+                    </div>
+                    <div class="col-md-7">
+                        <h2 class="rapdev">Rapid Development Project</h2>
+                        <p>We built Mycroft during the 2014 winter break, spending 3 weeks working 8-9 hour days.</p>
+                        <p>Rapid Development projects used to be built in the first weekend of winter and spring quarters,
+                            but the semester transition let us treat development like a real software project.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Tools</h2>
+                        <p>Mycroft was built to be extended on any platform, using any language with basic networking libraries. Here are some of the tools we used:</p>
+                        <div class="row tools">
+                            <div class="col-md-3">
+                                <h3><img src="images/Microsoft__NET_Framework_v4_5_logo.png" alt="Microsoft .NET logo" class="img-responsive" /></h3>
+                                <p>The core server, speech recognition app, and text-to-speech generator were all written in C#, and use the Microsoft Speech Platform.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h3><img src="images/nodejs.png" alt="Node.js logo" class="img-responsive" /></h3>
+                                <p>Many of our development tools were written with Node.js, and we've created an NPM package for building Mycroft apps.</p>
+                            </div>
+                            <div class="col-md-3" id="ruby-block">
+                                <h3><img src="images/Ruby_logo.svg" alt="Ruby logo" width="55" class="" />Ruby</h3>
+                                <p>Most of our plugins are built in Ruby, like our weather, jokes, and Pandora apps.
+                            </div>
+                            <div class="col-md-3">
+                                <h3><img src="images/python-logo-master-v3-TM.png" alt="Python logo" class="img-responsive" /></h3>
+                                <p>We used Python for our speaker and microphone apps, taking advantage of PyAudio for our multimedia handling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <p>Everything Mycroft can do is written in an "app" - a program running on any
+                        computer that talks to the central server using TCP
+                        sockets. Our communication API lets the core server
+                        direct apps to talk about each other, and apps respond
+                        when they can meet other applications' needs.</p>
+                        <canvas id="architecture" width="500" height="400" class="center-block"></canvas>
+                    </div>
+                </div>
+
+                <div class="centered-text" id="github">
+                    <p>All of our code is open source and available online</p>
+                    <img src="images/GitHub_Logo.png" alt="GitHub logo" width="200" class="img-responsive center-block" />
+                    <p class="lead">github.com/rit-sse-mycroft</p>
+                <div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/diagram.js"></script>
+</body>
+</html>
